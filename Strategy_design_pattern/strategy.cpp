@@ -106,7 +106,7 @@ int main(){
     r1->walk();
     r1->talk();
     r1->fly();
-    (*r1).projection();
+    r1->projection();
 
 
     return 0;
