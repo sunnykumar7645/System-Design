@@ -31,6 +31,7 @@ public:
             rank[ulp_u]++;
         }
     }
+    
     void unionBySize(int u, int v) {
         int ulp_u = findUPar(u);
         int ulp_v = findUPar(v);
