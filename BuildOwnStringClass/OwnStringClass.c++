@@ -9,20 +9,24 @@ private:
     unsigned int len;
 
 public:
+    // default constructor
     String() : str(nullptr), len(0) {
     }
 
+    // parameterized constructor
     String(const char *s) {
         len = strlen(s);
         str = new char[len + 1];
         strcpy(str, s);
     }
 
+    // copy constructor
     String(const String &other) {
         len = other.len;
         str = new char[len + 1];
         strcpy(str, other.str);
     }
+    // operator overload for assignment operator
     String& operator=(const String& s){
         if(this != &s){
             delete[] str;
