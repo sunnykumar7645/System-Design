@@ -246,7 +246,7 @@ int main(){
     Logger *logger = new Logger(notificationObservable);
 
     NotificationEngine *engine = new NotificationEngine(notificationObservable);
-
+git
     engine->addNotificationStrategy(new EmailNotificationStrategy("sunnny@gmial.com"));
     engine->addNotificationStrategy(new SMSNotificationStrategy("123-456-7890"));
     engine->addNotificationStrategy(new PopUpNotificationStrategy());
