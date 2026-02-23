@@ -27,15 +27,21 @@ public:
     youtubeChannel(string youtubeChannelName) {
         this->youtubeChannelName = youtubeChannelName;
     }
+
+    
     void attach(Observer *observer) override {
         observers_list.push_back(observer);
         cout << "Subscriber"<<observer<<"is added." << endl;
     }
+
+
     void detach(Observer *observer) override {
         observers_list.erase(remove(observers_list.begin(), observers_list.end(),
          observer), observers_list.end());
         cout << "Subscriber"<<observer<<"is removed." << endl;
     }
+
+    
     void notify() override {
         for (Observer *observer : observers_list) {
             observer->update( "New video uploaded by " + youtubeChannelName + "!" );
