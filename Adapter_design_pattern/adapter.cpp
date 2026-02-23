@@ -23,7 +23,10 @@ class IndianToUSAdapter: public PhoneCharger{
 private:
     ElectricSocket* socket;
 public:
+
     IndianToUSAdapter(ElectricSocket* sock): socket(sock) {}
+
+
     void chargePhone() override{
         cout<<"adapter converting 220V to 5V for Indian Socket"<<endl;
         socket->provideElectricity();
